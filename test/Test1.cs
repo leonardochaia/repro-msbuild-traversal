@@ -3,22 +3,12 @@ using System.IO;
 using System.Xml;
 using Microsoft.Build.Construction;
 using Microsoft.Build.Evaluation;
-using Microsoft.Build.Locator;
 using Repro;
 using Xunit;
 
 namespace MyNamespace
 {
-    public class BaseMSBuildTest
-    {
-        static BaseMSBuildTest()
-        {
-            MSBuildLocator.RegisterDefaults();
-        }
-    }
-
-
-    public class TheTest : BaseMSBuildTest
+    public class Test1 : BaseMSBuildTest
     {
         [Fact]
         public void Test()
