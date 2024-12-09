@@ -13,11 +13,14 @@ static void Test()
     // root.Sdk = "Microsoft.Build.Traversal/4.1.0";
 
     var project = new Project(root);
+    project.AddItem("ProjectReference", "./**/*.csproj");
+
+    Console.WriteLine("Generated project:");
+    Console.WriteLine(project.Xml.RawXml);
 }
 
-static void Main(string[] args)
-{
-    MSBuildLocator.RegisterDefaults();
-    
-    Test();
-}
+Console.WriteLine("STARTING");
+
+MSBuildLocator.RegisterDefaults();
+
+Test();
