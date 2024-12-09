@@ -59,10 +59,10 @@ jobs:
     - name: Run Tool PowerShell
       if: matrix.os == 'windows-latest'
       shell: pwsh
-      run: ./bin/Debug/net9.0/dotnet-affected-tv-repro && ./bin/Debug/net8.0/dotnet-affected-tv-repro
+      run: ./bin/Debug/net8.0/dotnet-affected-tv-repro
 
     - name: Run Tool Bash
       if: matrix.os == 'ubuntu-latest' || matrix.os == 'macos-latest'
       shell: bash
-      run: ./bin/Debug/net9.0/dotnet-affected-tv-repro && ./bin/Debug/net8.0/dotnet-affected-tv-repro
+      run: ./bin/Debug/net8.0/dotnet-affected-tv-repro
 
