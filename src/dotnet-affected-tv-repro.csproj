@@ -3,6 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <RootNamespace>dotnet_affected_tv_repro</RootNamespace>
+    <ToolCommandName>dotnet-affected-tv-repro</ToolCommandName>
+    <PackAsTool>true</PackAsTool>
   </PropertyGroup>
 
   <ItemGroup>
