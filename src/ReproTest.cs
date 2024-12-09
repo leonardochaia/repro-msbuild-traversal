@@ -14,7 +14,7 @@ public class ReproTest
         var root = ProjectRootElement.Create(xmlReader);
         // root.Sdk = "Microsoft.Build.Traversal/4.1.0";
 
-        var project = new Project(root);
+        var project = new Project(root, null, null, ProjectCollection.GlobalProjectCollection, ProjectLoadSettings.IgnoreMissingImports);
         project.AddItem("ProjectReference", "./**/*.csproj");
 
         Console.WriteLine("Generated project:");
